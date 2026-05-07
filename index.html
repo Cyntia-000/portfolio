@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyntia Rodríguez | Portfolio</title>
+    <meta name="description" content="Portfolio de Cyntia Rodríguez.">
+    <!-- Fuentes para replicar el estilo: Dancing Script para el logo/nombre, y Nunito para el texto -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-content">
+            <a href="#home" class="logo">Cyntia Rodríguez</a>
+            <ul class="nav-links">
+                <li><a href="#home">Acerca de mi</a></li>
+                <li><a href="#projects">Mis Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+                <li><a href="#redes">Redes</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Acerca de mi) -->
+    <section id="home" class="hero section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Hola! <i class="fas fa-id-card"></i></h1>
+                <p>
+                    Soy Cyntia, apasionada por la programación.<br>
+                    Por medio de mis estudios adquirí conocimientos en <strong>C++, C# y SQL</strong>.<br>
+                    Actualmente sigo formándome para crear soluciones eficientes y robustas.<br>
+                    En mi tiempo libre me gusta aprender nuevas tecnologías y desarrollar proyectos.
+                </p>
+            </div>
+            <div class="hero-image-container">
+                <div class="image-wrapper">
+                    <!-- Aquí se usa tu foto -->
+                    <img src="fotocyn.jpg" alt="Cyntia Rodríguez" class="hero-img" id="profile-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <h2 class="section-title">Mis Proyectos &lt;/&gt;</h2>
+        <div class="projects-grid">
+            
+            <!-- Proyecto 1 -->
+            <div class="project-card">
+                <div class="project-img-container" style="background-color: var(--bg-dark);">
+                    <div class="project-placeholder">
+                        <i class="fab fa-windows" style="font-size: 3rem; color: white;"></i>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Ejemplo-curso</h3>
+                    <p class="project-desc">Primer repositorio de ejemplo para curso.<br>Desarrollado con C#.</p>
+                </div>
+            </div>
+
+            <!-- Proyecto 2 -->
+            <div class="project-card">
+                <div class="project-img-container" style="background-color: var(--bg-mid);">
+                    <div class="project-placeholder">
+                        <i class="fab fa-windows" style="font-size: 3rem; color: white;"></i>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Ejemplo-curso1</h3>
+                    <p class="project-desc">Segundo repositorio de ejemplo.<br>Implementación en C#.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Redes / Contact Section -->
+    <section id="contact" class="contact section" style="padding-top: 0;">
+        <div class="contact-container" id="redes">
+            <h2 class="section-title" style="margin-bottom: 2rem; color: var(--bg-dark);">Redes</h2>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/cyntia-rodríguez-8078744b" target="_blank" class="social-icon" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/Cyntia-000" target="_blank" class="social-icon" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:cyntianoemirodriguez@hotmail.com" class="social-icon" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Cyntia Rodríguez. Creado con la nueva paleta de colores.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
