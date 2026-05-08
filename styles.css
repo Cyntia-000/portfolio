@@ -140,6 +140,34 @@ h1, h2, h3, h4 {
     margin: 0 auto;
 }
 
+.tech-stack {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.tech-badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: var(--transition);
+}
+
+.tech-badge:hover {
+    background: var(--white);
+    color: var(--bg-dark);
+    transform: translateY(-3px);
+}
+
 .hero-image-container {
     flex: 1;
     display: flex;
@@ -166,6 +194,115 @@ h1, h2, h3, h4 {
     object-fit: cover;
     border-radius: 50%;
     border: 5px solid var(--white);
+}
+
+/* Education Section */
+.education-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.edu-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    backdrop-filter: blur(5px);
+    transition: var(--transition);
+}
+
+.edu-card:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.edu-icon {
+    font-size: 2.5rem;
+    color: var(--white);
+    min-width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.school-logo {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: var(--white);
+    padding: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.edu-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 3px var(--bg-dark), 0px 0px 4px var(--bg-dark); /* Borde rosa oscuro para contraste */
+}
+
+.edu-degree {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--bg-dark);
+    background: var(--bg-lighter);
+    display: inline-block;
+    padding: 0.2rem 0.8rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+.edu-date {
+    font-size: 0.9rem;
+    text-shadow: 1px 1px 2px var(--bg-dark); /* Mejora de lectura */
+}
+
+.edu-list {
+    list-style-type: none;
+    margin-left: 0;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
+
+.edu-list li {
+    font-size: 0.95rem;
+    font-weight: 700;
+    background: var(--bg-lighter);
+    color: var(--bg-dark);
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    transition: var(--transition);
+    text-shadow: none; /* Quitamos la sombra porque ahora tienen fondo claro */
+}
+
+.edu-list li:hover {
+    transform: translateY(-3px) scale(1.05);
+    background: var(--white);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 600px) {
+    .edu-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    .edu-icon {
+        justify-content: center;
+    }
+    .edu-list {
+        list-style-type: none;
+        margin-left: 0;
+    }
 }
 
 /* Projects Section */
@@ -242,16 +379,115 @@ h1, h2, h3, h4 {
     border-radius: 50%;
     background: var(--white);
     color: var(--bg-dark);
-    font-size: 1.8rem;
     text-decoration: none;
     transition: var(--transition);
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.social-icon svg {
+    width: 24px;
+    height: 24px;
 }
 
 .social-icon:hover {
     transform: translateY(-5px) scale(1.05);
     background: var(--bg-dark);
     color: var(--white);
+}
+
+/* Colores originales Redes Sociales */
+.social-icon.linkedin {
+    color: #0077b5;
+}
+.social-icon.linkedin:hover {
+    background: #0077b5;
+    color: #ffffff;
+}
+
+.social-icon.github {
+    color: #333333;
+}
+.social-icon.github:hover {
+    background: #333333;
+    color: #ffffff;
+}
+
+.social-icon.email {
+    color: #EA4335; /* Color rojo vibrante estilo Google Mail */
+}
+.social-icon.email:hover {
+    /* Degradado especial para el correo al pasar el mouse */
+    background: linear-gradient(135deg, #EA4335, #FBBC05, #34A853, #4285F4);
+    color: #ffffff;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto 2.5rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.3); /* Translucent white matching screenshot */
+    color: var(--text-dark);
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    outline: none;
+    transition: var(--transition);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(51, 51, 51, 0.7);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.form-submit {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.5rem;
+}
+
+.submit-btn {
+    padding: 0.6rem 2.5rem;
+    background: var(--bg-dark);
+    color: var(--white);
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.submit-btn:hover {
+    background: var(--bg-mid);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.connect-text {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    font-weight: 600;
 }
 
 /* Footer */
@@ -295,5 +531,67 @@ footer {
 
     .hamburger {
         display: block;
+    }
+}
+.tech-stack{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:25px;
+}
+
+.tech-badge{
+    padding:16px 28px;
+    border-radius:20px;
+    font-size:22px;
+    font-weight:bold;
+    color:white;
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    transition:0.4s;
+    cursor:pointer;
+
+    animation: flotar 3s ease-in-out infinite;
+}
+
+.tech-badge i{
+    font-size:26px;
+}
+
+.cpp{
+    background:linear-gradient(135deg,#00599C,#3C8DFF);
+}
+
+.csharp{
+    background:linear-gradient(135deg,#68217A,#9B4DCA);
+}
+
+.powerbi{
+    background:linear-gradient(135deg,#F2C811,#ffdf5e);
+    color:#222;
+}
+
+.sql{
+    background:linear-gradient(135deg,#CC2927,#ff5b57);
+}
+
+.tech-badge:hover{
+    transform:translateY(-8px) scale(1.08);
+    box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+
+@keyframes flotar{
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-6px);
+    }
+
+    100%{
+        transform:translateY(0px);
     }
 }
